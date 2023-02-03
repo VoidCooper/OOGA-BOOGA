@@ -16,6 +16,7 @@ public class PlayerFPSMovement : MonoBehaviour
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode shootKey = KeyCode.Mouse0;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -23,6 +24,7 @@ public class PlayerFPSMovement : MonoBehaviour
     bool grounded;
 
     public Transform orientation;
+    public PlayerHand playerHand;
 
     float horizontalInput;
     float verticalInput;
@@ -40,7 +42,10 @@ public class PlayerFPSMovement : MonoBehaviour
     void Update()
     {
         CheckIsPlayerGrounded();
-        HandleInput();
+
+        HandleMovementInput();
+        HandleCombatInput();
+
         SpeedControl();
         HandlePostMovement();
     }
@@ -55,7 +60,7 @@ public class PlayerFPSMovement : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight + 0.5f + 0.2f, whatIsGround);
     }
 
-    private void HandleInput()
+    private void HandleMovementInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
@@ -67,6 +72,14 @@ public class PlayerFPSMovement : MonoBehaviour
             Jump();
 
             Invoke(nameof(ResetJump), jumpCooldown);
+        }
+    }
+
+    private void HandleCombatInput()
+    {
+        if (Input.GetKey(shootKey))
+        {
+            playerHand.ShootSpear();
         }
     }
 
