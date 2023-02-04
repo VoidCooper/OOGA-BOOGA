@@ -18,12 +18,14 @@ public class GameManager : MonoBehaviour
     private static GameManager m_instance;
     private float _gameSpeed;
     private float _unpausedSpeed;
-    private float _gameLength = 10;
+    private float _gameLength = 300;
     private ScaledOneshotTimer _gameTimer;
 
     public float gameLength { get { return _gameLength; } }
     public float GameSpeed { get { return _gameSpeed; } }
 
+    public float RemainingTime { get { return _gameTimer.TimeLeft; } }
+    
     // Events
     public event System.Action OnGameUnPaused;
     public event System.Action OnGamePaused;
