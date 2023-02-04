@@ -18,14 +18,32 @@ public class GameManager : MonoBehaviour
     private static GameManager m_instance;
     private float _gameSpeed;
     private float _unpausedSpeed;
+    private float _gameLength = 600;
+    private ScaledOneshotTimer _gameTimer;
 
+    public float gameLength { get { return _gameLength; } }
     public float GameSpeed { get { return _gameSpeed; } }
 
     // Events
     public event System.Action OnGameUnPaused;
     public event System.Action OnGamePaused;
     public event System.Action<float> OnGameSpeedChanged;
+    public event System.Action OnEndIsNigh;
 
+    private void Awake()
+    {
+        _gameTimer = gameObject.AddComponent<ScaledOneshotTimer>();
+        _gameTimer.OnTimerCompleted += BeginTheEndofTime;
+        _gameTimer.StartTimer(_gameLength);
+    }
+
+    public void BeginTheEndofTime()
+    {
+        Debug.Log("THE END IS NIGH!");
+        OnEndIsNigh?.Invoke();
+
+        // TODO: End game
+    }
 
     public void PauseGame()
     {
@@ -51,7 +69,7 @@ public class GameManager : MonoBehaviour
         if (m_instance != null)
             return;
 
-        GameObject go = new GameObject("GlobalReferenceManager");
+        GameObject go = new GameObject("GameManager");
         GameManager grm = go.AddComponent<GameManager>();
         m_instance = grm;
 
