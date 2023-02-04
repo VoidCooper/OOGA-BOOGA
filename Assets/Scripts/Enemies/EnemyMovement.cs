@@ -12,9 +12,9 @@ public class EnemyMovement : MonoBehaviour
     public bool IsFleeing = false;
     public bool IsStopped = false;
 
-    private void Awake()
+    private void Start()
     {
-        Target = GlobalReferenceManager.Instance.MainCamera.transform;
+        Target = GlobalReferenceManager.Instance.Player.transform;
     }
 
     // Update is called once per frame
