@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 9164032571091352934}
   - component: {fileID: 584609479125812317}
   - component: {fileID: 4073946798231938775}
+  - component: {fileID: 2293279716251381799}
   m_Layer: 0
   m_Name: Spear
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +75,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSpeed: 25
-  maxLifeTime: 1
+  maxLifeTime: 15
+  damage: 50
+  isPearcing: 0
+--- !u!65 &2293279716251381799
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042092077348616261}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.1, z: 1.85}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6769866239417518544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,37 +158,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd9b8141bcf61224eabdf97858118b4d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7477765374716850317}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd9b8141bcf61224eabdf97858118b4d, type: 3}
---- !u!1 &5850752782095168641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd9b8141bcf61224eabdf97858118b4d, type: 3}
-  m_PrefabInstance: {fileID: 6769866239417518544}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &7477765374716850317
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5850752782095168641}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.204227, y: 2.3980832, z: 1.5000006}
-  m_Center: {x: 0.000000059604645, y: -0.19904147, z: -2.262839e-14}
 --- !u!4 &6519483847612657211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd9b8141bcf61224eabdf97858118b4d, type: 3}

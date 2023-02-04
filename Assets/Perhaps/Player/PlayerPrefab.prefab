@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startVelocity: 5
   spearThrowCooldown: 0.2
+  spearThrowDelay: 0.02
   spearPrefabObj: {fileID: 1042092077348616261, guid: f02a6736a5ad9d949b17ea526e2594c0, type: 3}
   projectileSpawner: {fileID: 6993822636186049719}
   handModel: {fileID: 7450806893507856217}
@@ -728,9 +729,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   groundDrag: 5
-  jumpForce: 6
+  jumpForce: 9
   jumpCooldown: 0.25
-  airMultiplier: 0.4
+  airMultiplier: 0.3
   jumpKey: 32
   shootKey: 323
   playerHeight: 0.5
