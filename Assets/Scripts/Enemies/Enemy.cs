@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void TookDamage()
+    private void TookDamage(float value)
     {
         HurtTime = 0.25f;
         m_animator.OverrideSprite = HurtSprite;

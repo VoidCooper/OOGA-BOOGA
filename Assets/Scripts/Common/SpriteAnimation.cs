@@ -52,7 +52,7 @@ public class SpriteAnimation : MonoBehaviour
                 {
                     Stopped = true;
                     AnimationEnded?.Invoke();
-                    m_currentIndex = AnimationSprites.Length - 1;
+                    m_currentIndex = 0;
                 }
             }
         }

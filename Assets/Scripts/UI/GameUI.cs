@@ -10,50 +10,91 @@ public class GameUI : MonoBehaviour
     public UI_Slider HitpointSlider;
     public UI_Slider HungerSlider;
 
+    public GameObject ScratchPrefab;
+
+    private ObjectPool _pool;
+    private Health _playerHealth;
+    private Hunger _playerHunger;
+
     [SerializeField]
     private Canvas _canvas;
+    [SerializeField]
+    private RectTransform _scratchZone;
+    [SerializeField]
+    private float ScratchMaxSize, ScratchMinSize;
 
     [Range(0f, 1f)]
     [SerializeField]
     private float _lowThreshold = 0.25f;
-    private ScaledRepeatingTimer _timer;
-    private bool _down = true;
 
     private void Awake()
     {
-        _timer = gameObject.AddComponent<ScaledRepeatingTimer>();
+        _pool = gameObject.AddComponent<ObjectPool>();
+        _pool.PrefillObj = ScratchPrefab;
+        _pool.PreFillPool = true;
     }
 
     // Start is called before the first frame update
-    private void Start()
+    private void Start() 
     {
+        _playerHealth = GlobalReferenceManager.Instance.Player.GetComponent<Health>();
+        _playerHunger = GlobalReferenceManager.Instance.Player.GetComponent<Hunger>();
+
         if (_canvas.worldCamera == null)
             _canvas.worldCamera = GetComponent<Camera>();
 
-        _timer.StartTimer(0.2f);
-        _timer.OnTimerCompleted += UpdateThing;
+        CalcColor(HungerSlider.Slider, HungerSlider.Fill, HungerSlider.Gradient);
+        CalcColor(HitpointSlider.Slider, HitpointSlider.Fill, HitpointSlider.Gradient);
+        HealPlayer(_playerHealth.GetNormalizedHealth());
+        Hunger(_playerHunger.GetNormalizedHunger());
+
+        _playerHealth.Healed += HealPlayer;
+        _playerHealth.TookDamage += DamagePlayer;
+        _playerHealth.IsDying += PlayerDead;
     }
 
-    // Update is called once per frame
     private void Update()
     {
+        Hunger(_playerHunger.CurrentHunger);
     }
 
-    private void UpdateThing()
+    public void DamagePlayer(float normHP)
     {
-        if (_down)
-        {
-            UpdateSliderValue(HitpointSlider, HitpointSlider.Slider.value - 0.025f);
-            if (HitpointSlider.Slider.value <= 0.01f)
-                _down = false;
-        }
-        else
-        {
-            UpdateSliderValue(HitpointSlider, HitpointSlider.Slider.value + 0.025f);
+        UpdateSliderValue(HitpointSlider, normHP);
+        SpawnScratch();
+    }
+    public void HealPlayer(float normHP)
+    {
+        UpdateSliderValue(HitpointSlider, normHP);
+    }
 
-            if (HitpointSlider.Slider.value >= 0.99f)
-                _down = true;
-        }
+    public void Hunger(float normHunger)
+    {
+        UpdateSliderValue(HungerSlider, normHunger);
+    }
+
+    private void PlayerDead()
+    {
+        HitpointSlider.Slider.value = 0f;
+        _playerHealth.Healed -= HealPlayer;
+        _playerHealth.TookDamage -= DamagePlayer;
+        _playerHealth.IsDying -= PlayerDead;
+    }
+
+    private void SpawnScratch()
+    {
+        GameObject scratch = _pool.Take();
+        bool flipped = Random.Range(1, 10) > 5 ? true : false;
+        Vector2 pos = new(Random.Range(_scratchZone.rect.xMin, _scratchZone.rect.xMax), Random.Range(_scratchZone.rect.yMin, _scratchZone.rect.yMax));
+        Vector2 size = new(Random.Range(ScratchMinSize, ScratchMaxSize), Random.Range(ScratchMinSize, ScratchMaxSize));
+
+        if (flipped)
+            size.x = -size.x;
+
+        scratch.transform.SetParent(_scratchZone.transform);
+        scratch.transform.localPosition = pos;
+        scratch.transform.localScale = size;
+        scratch.SetActive(true);
     }
 
     private void UpdateSliderValue(UI_Slider sli, float value)
