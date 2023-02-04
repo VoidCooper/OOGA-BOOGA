@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41683fdb64eabd44ba2ab5f831c28f47
+guid: 5bf6f47b600c8bd4598f8d459f5b84aa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tiger_wip_0
+      name: scratch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 57
-        height: 91
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e31a7db20023f9c47bcb6f4584b93795
-      internalID: 1844231245
+      spriteID: 718ec27ae5df78c40bb2642fdad15b89
+      internalID: -668699808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiger_wip_1
+      name: scratch_1
       rect:
         serializedVersion: 2
         x: 57
         y: 0
         width: 57
-        height: 91
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c737b6248e29ca4f8aeaf0e22a8a9d3
-      internalID: -215745397
+      spriteID: e391a0eb3072be84db8a68e686b615b5
+      internalID: 695533380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scratch_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffae3991c4db7954b8e7617d682581df
+      internalID: 1003899742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scratch_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b03a2df3614ad4893fca9c2e8cf42d
+      internalID: 1906279436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scratch_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4a0ab3568d54b4a8586b158ea766fe
+      internalID: -1587903032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scratch_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7014098a471ed44a8a0dea0cfe1f629
+      internalID: 348986947
       vertices: []
       indices: 
       edges: []
@@ -151,7 +235,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1cc65135bb546c84782389bacda2c98c
+    spriteID: 3c4f9511884e2ab4c90ea49f4b4e4290
     internalID: 0
     vertices: []
     indices: 
@@ -159,8 +243,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tiger_wip_0: 1844231245
-      tiger_wip_1: -215745397
+      scratch_5: 348986947
+      scratch_0: -668699808
+      scratch_2: 1003899742
+      scratch_1: 695533380
+      scratch_3: 1906279436
+      scratch_4: -1587903032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

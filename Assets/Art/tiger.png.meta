@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c3726a72ee02184e8a3c207a6af1bf7
+guid: 37888d395c4a8ca4383dd5bba01ada8a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,8 +37,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -49,8 +49,8 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 57, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bear_0
+      name: tiger_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 57
-        height: 64
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e70211c3d25270347b56d6700662ae9d
-      internalID: 2006130168
+      spriteID: 9f66c8ad147fa2c4eaa984489923a4ac
+      internalID: -1230606613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bear_1
+      name: tiger_1
       rect:
         serializedVersion: 2
         x: 57
         y: 0
         width: 57
-        height: 64
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9086ccd97d206e348a44be5157d30225
-      internalID: -1508505697
+      spriteID: 4d23e2f666414064888abd46e21d5d15
+      internalID: 711462948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bear_2
+      name: tiger_2
       rect:
         serializedVersion: 2
         x: 114
         y: 0
         width: 57
-        height: 64
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4437ce10f189a2499ac589fd3891c0d
-      internalID: -1192862191
+      spriteID: 51aec1c3e8e8e194786b842576d8be38
+      internalID: 746134243
       vertices: []
       indices: 
       edges: []
@@ -172,17 +172,17 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 7cad63258cf8cab468ec9286f4e5bd6d
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bear_2: -1192862191
-      bear_0: 2006130168
-      bear_1: -1508505697
+      tiger_0: -1230606613
+      tiger_1: 711462948
+      tiger_2: 746134243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
