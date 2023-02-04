@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54,28 +54,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984074, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: MovementSpeed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: HurtSprite
+      value: 
+      objectReference: {fileID: 746134243, guid: 37888d395c4a8ca4383dd5bba01ada8a, type: 3}
     - target: {fileID: 7577080138904984077, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Name
       value: Tikru
       objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038081, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080139673038081, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_Size.y
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080139673038081, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1844231245, guid: 41683fdb64eabd44ba2ab5f831c28f47, type: 3}
+      objectReference: {fileID: -1230606613, guid: 37888d395c4a8ca4383dd5bba01ada8a, type: 3}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: TimeOnFrame
-      value: 0.33
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: AnimationSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 1844231245, guid: 41683fdb64eabd44ba2ab5f831c28f47, type: 3}
+      objectReference: {fileID: -1230606613, guid: 37888d395c4a8ca4383dd5bba01ada8a, type: 3}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: AnimationSprites.Array.data[1]
       value: 
-      objectReference: {fileID: -215745397, guid: 41683fdb64eabd44ba2ab5f831c28f47, type: 3}
+      objectReference: {fileID: 711462948, guid: 37888d395c4a8ca4383dd5bba01ada8a, type: 3}
     - target: {fileID: 7577080139673038083, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalScale.x
       value: 2

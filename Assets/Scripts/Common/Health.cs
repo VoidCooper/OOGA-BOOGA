@@ -29,9 +29,9 @@ public class Health : MonoBehaviour
 
         if (CurrentHealth <= 0)
             IsDying?.Invoke();
-        else if (amount < 0)
-            TookDamage?.Invoke();
         else if (amount > 0)
+            TookDamage?.Invoke();
+        else if (amount < 0)
             Healed?.Invoke();
     }
 

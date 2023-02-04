@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3663866371838541225
+--- !u!1001 &8576773808975580477
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.967
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,34 +64,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984074, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: MovementSpeed
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: HurtSprite
       value: 
-      objectReference: {fileID: -1192862191, guid: 8c3726a72ee02184e8a3c207a6af1bf7, type: 3}
+      objectReference: {fileID: 111422875, guid: 3ecaab6974d6a6e4ab08d05d7fb71ca5, type: 3}
     - target: {fileID: 7577080138904984077, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Name
-      value: Karhu
+      value: EiElain
       objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038081, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2006130168, guid: 8c3726a72ee02184e8a3c207a6af1bf7, type: 3}
+      objectReference: {fileID: -1432183706, guid: 3ecaab6974d6a6e4ab08d05d7fb71ca5, type: 3}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: TimeOnFrame
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: AnimationSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 2006130168, guid: 8c3726a72ee02184e8a3c207a6af1bf7, type: 3}
+      objectReference: {fileID: -1432183706, guid: 3ecaab6974d6a6e4ab08d05d7fb71ca5, type: 3}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: AnimationSprites.Array.data[1]
       value: 
-      objectReference: {fileID: -1508505697, guid: 8c3726a72ee02184e8a3c207a6af1bf7, type: 3}
+      objectReference: {fileID: -1983387260, guid: 3ecaab6974d6a6e4ab08d05d7fb71ca5, type: 3}
     - target: {fileID: 7577080139673038083, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
