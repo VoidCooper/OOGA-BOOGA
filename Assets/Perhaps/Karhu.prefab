@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984074, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: MovementSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984077, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Name
       value: Karhu
