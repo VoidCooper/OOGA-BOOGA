@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float Damage = 10;
     public Sprite HurtSprite;
     public float HurtTime = 0;
+    public GameObject pickupObject;
 
     private void Awake()
     {
@@ -64,6 +65,10 @@ public class Enemy : MonoBehaviour
 
     private void IsDying()
     {
+        if (pickupObject != null)
+        {
+            GameObject.Instantiate(pickupObject, transform.position, Quaternion.identity);
+        }
         gameObject.SetActive(false);
     }
 

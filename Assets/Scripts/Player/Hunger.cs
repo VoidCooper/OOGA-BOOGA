@@ -34,4 +34,9 @@ public class Hunger : MonoBehaviour
             CurrentHunger -= StarveWhileHealing * Time.deltaTime;
         }
     }
+
+    public void EatFood()
+    {
+        TookFood?.Invoke();
+    }
 }

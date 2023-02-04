@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: HurtSprite
       value: 
       objectReference: {fileID: 746134243, guid: 37888d395c4a8ca4383dd5bba01ada8a, type: 3}
+    - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: pickupObject
+      value: 
+      objectReference: {fileID: 2236055698158595668, guid: 1fcaa9686fb4e6f4c98e2d73b0ca270f, type: 3}
     - target: {fileID: 7577080138904984077, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Name
       value: Tikru

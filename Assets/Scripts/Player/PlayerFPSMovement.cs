@@ -128,4 +128,13 @@ public class PlayerFPSMovement : MonoBehaviour
     {
         readyToJump = true;
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Pickup")
+        {
+            GetComponent<Hunger>().EatFood();
+            Destroy(collider.gameObject);
+        }
+    }
 }
