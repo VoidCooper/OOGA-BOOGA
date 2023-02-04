@@ -22,6 +22,8 @@ public class GameUI : MonoBehaviour
     private RectTransform _scratchZone;
     [SerializeField]
     private float ScratchMaxSize, ScratchMinSize;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI _TimerText;
 
     [Range(0f, 1f)]
     [SerializeField]
@@ -57,6 +59,8 @@ public class GameUI : MonoBehaviour
     private void Update()
     {
         Hunger(_playerHunger.CurrentHunger);
+        float minutes = Mathf.Round(GameManager.Instance.RemainingTime / 60);
+        _TimerText.text = $"{minutes:00}:{GameManager.Instance.RemainingTime - minutes * 60:00}";
     }
 
     public void DamagePlayer(float normHP)

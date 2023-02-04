@@ -12,6 +12,7 @@ public class Hunger : MonoBehaviour
     public float DamageWithHungerSpeed = 1.5f;
 
     public event System.Action TookFood;
+    private bool drainPaused = false;
 
     Health health;
 
@@ -26,8 +27,33 @@ public class Hunger : MonoBehaviour
         health = GetComponent<Health>();
     }
 
+    private void Start()
+    {
+        GameManager.Instance.OnGamePaused += OnGamePaused;
+        GameManager.Instance.OnGameUnPaused += OnGameUnPaused;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnGamePaused -= OnGamePaused;
+        GameManager.Instance.OnGameUnPaused -= OnGameUnPaused;
+    }
+
+    private void OnGameUnPaused()
+    {
+        drainPaused = false;
+    }
+
+    private void OnGamePaused()
+    {
+        drainPaused = true;
+    }
+
     public void Update()
     {
+        if (drainPaused)
+            return;
+
         float healAmount = 0;
         CurrentHunger -= StarveSpeed * Time.deltaTime;
         if (health.CurrentHealth < health.MaxHealth)
