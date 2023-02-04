@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float Damage = 10;
     public Sprite HurtSprite;
     public float HurtTime = 0;
+    public GameObject BloodParticles;
 
     private void Awake()
     {
@@ -59,11 +60,13 @@ public class Enemy : MonoBehaviour
         HurtTime = 0.25f;
         m_animator.OverrideSprite = HurtSprite;
         m_movement.IsStopped = true;
+        Instantiate(BloodParticles, transform.position, Quaternion.identity);
     }
 
 
     private void IsDying()
     {
+        Instantiate(BloodParticles, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }
 
@@ -72,7 +75,6 @@ public class Enemy : MonoBehaviour
         Vector3 movement = transform.forward * DealDamageSelfKnockBack;
         movement.y = 0;
         transform.localPosition -= movement;
-        m_health.DealDamage(1);
         Health targetHealth = m_movement.Target.GetComponent<Health>();
         targetHealth?.DealDamage(Damage);
     }
