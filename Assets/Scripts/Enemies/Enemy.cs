@@ -15,8 +15,14 @@ public class Enemy : MonoBehaviour
     {
         m_movement = gameObject.GetComponent<EnemyMovement>();
         m_health = gameObject.GetComponent<Health>();
+    }
 
-        m_movement.Target = GlobalReferenceManager.Instance.Player.transform;
+    private void Start()
+    {
+        m_movement.Target = GlobalReferenceManager.Instance.Player?.transform;
+
+        if (m_movement.Target == null)
+            m_movement.enabled = false;
 
         m_health.IsDying += IsDying;
         m_movement.ContactEvent += ContactEvent;
