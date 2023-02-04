@@ -16,7 +16,7 @@ public class PlayerStatus : MonoBehaviour
         hunger.TookFood += EatMeat;
     }
 
-    private void TakeDamage()
+    private void TakeDamage(float value)
     {
         audioClipsSo.PlayRandomAudioClip(transform, AudioClipType.PlayerHurt);
     }

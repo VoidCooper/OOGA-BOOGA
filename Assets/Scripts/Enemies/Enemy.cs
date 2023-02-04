@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public Sprite HurtSprite;
     public float HurtTime = 0;
     public GameObject pickupObject;
+    public GameObject BloodParticles;
 
     private void Awake()
     {
@@ -55,11 +56,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void TookDamage()
+    private void TookDamage(float value)
     {
         HurtTime = 0.25f;
         m_animator.OverrideSprite = HurtSprite;
         m_movement.IsStopped = true;
+        Instantiate(BloodParticles, transform.position, Quaternion.identity);
     }
 
 
@@ -69,6 +71,8 @@ public class Enemy : MonoBehaviour
         {
             GameObject.Instantiate(pickupObject, transform.position, Quaternion.identity);
         }
+
+        Instantiate(BloodParticles, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }
 
@@ -77,7 +81,6 @@ public class Enemy : MonoBehaviour
         Vector3 movement = transform.forward * DealDamageSelfKnockBack;
         movement.y = 0;
         transform.localPosition -= movement;
-        m_health.DealDamage(1);
         Health targetHealth = m_movement.Target.GetComponent<Health>();
         targetHealth?.DealDamage(Damage);
     }

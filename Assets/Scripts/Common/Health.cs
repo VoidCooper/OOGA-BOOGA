@@ -8,8 +8,8 @@ public class Health : MonoBehaviour
     public float CurrentHealth;
     
     public event System.Action IsDying;
-    public event System.Action TookDamage;
-    public event System.Action Healed;
+    public event System.Action<float> TookDamage;
+    public event System.Action<float> Healed;
 
     private void Awake()
     {
@@ -30,9 +30,9 @@ public class Health : MonoBehaviour
         if (CurrentHealth <= 0)
             IsDying?.Invoke();
         else if (amount > 0)
-            TookDamage?.Invoke();
+            TookDamage?.Invoke(CurrentHealth);
         else if (amount < 0)
-            Healed?.Invoke();
+            Healed?.Invoke(CurrentHealth);
     }
 
 }
