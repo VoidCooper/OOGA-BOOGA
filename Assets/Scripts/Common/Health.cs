@@ -15,6 +15,10 @@ public class Health : MonoBehaviour
     {
         CurrentHealth = MaxHealth;
     }
+    public float GetNormalizedHealth()
+    {
+        return Mathf.Round(CurrentHealth);
+    }
 
     public void DealDamage(float amount)
     {
@@ -30,4 +34,5 @@ public class Health : MonoBehaviour
         else if (amount > 0)
             Healed?.Invoke();
     }
+
 }

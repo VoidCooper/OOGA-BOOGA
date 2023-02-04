@@ -26,6 +26,8 @@ public class PlayerFPSMovement : MonoBehaviour
     public Transform orientation;
     public PlayerHand playerHand;
 
+    public AudioClipsSO audioClipsSo;
+
     float horizontalInput;
     float verticalInput;
 
@@ -33,7 +35,8 @@ public class PlayerFPSMovement : MonoBehaviour
 
     Rigidbody rb;
 
-    void Start()
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -117,6 +120,8 @@ public class PlayerFPSMovement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        audioClipsSo.PlayRandomAudioClip(transform, AudioClipType.PlayerJump);
     }
 
     private void ResetJump()

@@ -148,6 +148,7 @@ MonoBehaviour:
   spearPrefabObj: {fileID: 1042092077348616261, guid: f02a6736a5ad9d949b17ea526e2594c0, type: 3}
   projectileSpawner: {fileID: 6993822636186049719}
   handModel: {fileID: 7450806893507856217}
+  audioClipsSo: {fileID: 11400000, guid: 45f4f7640d7d7084597287381dd5681b, type: 2}
 --- !u!1 &6993822635651354137
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +664,9 @@ GameObject:
   - component: {fileID: 6993822636241104077}
   - component: {fileID: 6993822636241104115}
   - component: {fileID: 6993822636241104114}
+  - component: {fileID: 4582000104029263083}
+  - component: {fileID: 7632209400739117753}
+  - component: {fileID: 3385294054161404204}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -740,6 +744,51 @@ MonoBehaviour:
     m_Bits: 64
   orientation: {fileID: 6993822634773136600}
   playerHand: {fileID: 6993822635542798571}
+  audioClipsSo: {fileID: 11400000, guid: 45f4f7640d7d7084597287381dd5681b, type: 2}
+--- !u!114 &4582000104029263083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993822636241104076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf666dc02f7f1dd459539e722bee754a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipsSo: {fileID: 11400000, guid: 45f4f7640d7d7084597287381dd5681b, type: 2}
+--- !u!114 &7632209400739117753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993822636241104076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9013204b8ae784e8829a672699cd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  CurrentHealth: 0
+--- !u!114 &3385294054161404204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993822636241104076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7994c37306a0f48a58adeb38d47856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHunger: 100
+  CurrentHunger: 0
+  StarveSpeed: 1
+  StarveWhileHealing: 0.5
+  HealWithHungerSpeed: 0.25
 --- !u!1001 &5367156514140461880
 PrefabInstance:
   m_ObjectHideFlags: 0

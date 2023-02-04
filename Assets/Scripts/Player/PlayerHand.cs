@@ -12,6 +12,8 @@ public class PlayerHand : MonoBehaviour
     public Transform projectileSpawner;
     public GameObject handModel;
 
+    public AudioClipsSO audioClipsSo;
+
     private bool _isThrowOnCooldown;
     private Animator _animationComponent;
 
@@ -26,6 +28,8 @@ public class PlayerHand : MonoBehaviour
             return;
 
         _animationComponent.SetTrigger("ThrowSpearTrigger");
+
+        audioClipsSo.PlayRandomAudioClip(transform, AudioClipType.PlayerThrow);
 
         _isThrowOnCooldown = true;
         Invoke(nameof(InstantiateSpear), spearThrowDelay);
