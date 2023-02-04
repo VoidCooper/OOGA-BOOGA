@@ -133,7 +133,7 @@ public class PlayerFPSMovement : MonoBehaviour
     {
         if (collider.gameObject.tag == "Pickup")
         {
-            GetComponent<Hunger>().EatFood();
+            GetComponent<Hunger>().EatFood(collider.gameObject.GetComponent<PickupValue>().ValueAmount);
             Destroy(collider.gameObject);
         }
     }

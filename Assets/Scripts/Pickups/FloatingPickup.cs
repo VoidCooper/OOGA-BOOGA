@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupFloat : MonoBehaviour
+public class FloatingPickup : MonoBehaviour
 {
     public float floatSpeed = 5f;
     public float floatHeight = 10f;

@@ -9,6 +9,7 @@ public class Hunger : MonoBehaviour
     public float StarveSpeed = 1f;
     public float StarveWhileHealing = 0.5f;
     public float HealWithHungerSpeed = 0.25f;
+    public float DamageWithHungerSpeed = 1.5f;
 
     public event System.Action TookFood;
 
@@ -27,16 +28,27 @@ public class Hunger : MonoBehaviour
 
     public void Update()
     {
+        float healAmount = 0;
         CurrentHunger -= StarveSpeed * Time.deltaTime;
         if (health.CurrentHealth < health.MaxHealth)
         {
-            CurrentHunger += HealWithHungerSpeed * Time.deltaTime;
+            healAmount -= HealWithHungerSpeed * Time.deltaTime;
             CurrentHunger -= StarveWhileHealing * Time.deltaTime;
         }
+
+        CurrentHunger = Mathf.Clamp(CurrentHunger, 0, MaxHunger);
+
+        if (CurrentHunger == 0)
+        {
+            healAmount += DamageWithHungerSpeed * Time.deltaTime;
+        }
+
+        health.DealDamageWithoutScratch(healAmount);
     }
 
-    public void EatFood()
+    public void EatFood(float amount)
     {
+        CurrentHunger += amount;
         TookFood?.Invoke();
     }
 }

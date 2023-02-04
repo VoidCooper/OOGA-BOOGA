@@ -712,9 +712,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHunger: 100
   CurrentHunger: 0
-  StarveSpeed: 1
+  StarveSpeed: 1.5
   StarveWhileHealing: 0.5
-  HealWithHungerSpeed: 0.25
+  HealWithHungerSpeed: 0.75
+  DamageWithHungerSpeed: 1.5
 --- !u!114 &5920287372438236922
 MonoBehaviour:
   m_ObjectHideFlags: 0

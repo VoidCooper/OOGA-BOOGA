@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 465294968156035801}
   - component: {fileID: 1430840936067321269}
   - component: {fileID: 3620962306138115019}
+  - component: {fileID: 7120361091411627964}
   m_Layer: 10
   m_Name: MeatPickup
   m_TagString: Pickup
@@ -184,6 +185,20 @@ MonoBehaviour:
   pickupRange: 4
   pickupSpeed: 5.5
   floatingTransform: {fileID: 1047180916848142391}
+--- !u!114 &7120361091411627964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236055698158595668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d7a67ecb6a11e499709c941e11c6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StarveHealAmount: 3
+  pickupType: 0
 --- !u!1 &3103385430281395369
 GameObject:
   m_ObjectHideFlags: 0

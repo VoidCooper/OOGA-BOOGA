@@ -50,6 +50,7 @@ public class GameUI : MonoBehaviour
 
         _playerHealth.Healed += HealPlayer;
         _playerHealth.TookDamage += DamagePlayer;
+        _playerHealth.TookDamageByOtherMeans += DamagePlayerWithoutSratch;
         _playerHealth.IsDying += PlayerDead;
     }
 
@@ -63,6 +64,12 @@ public class GameUI : MonoBehaviour
         UpdateSliderValue(HitpointSlider, normHP);
         SpawnScratch();
     }
+
+    public void DamagePlayerWithoutSratch(float normHP)
+    {
+        UpdateSliderValue(HitpointSlider, normHP);
+    }
+
     public void HealPlayer(float normHP)
     {
         UpdateSliderValue(HitpointSlider, normHP);

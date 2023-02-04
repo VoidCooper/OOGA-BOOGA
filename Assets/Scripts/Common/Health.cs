@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     
     public event System.Action IsDying;
     public event System.Action<float> TookDamage;
+    public event System.Action<float> TookDamageByOtherMeans;
     public event System.Action<float> Healed;
 
     private void Awake()
@@ -30,7 +31,26 @@ public class Health : MonoBehaviour
         if (CurrentHealth <= 0)
             IsDying?.Invoke();
         else if (amount > 0)
+        {
             TookDamage?.Invoke(CurrentHealth);
+        }
+        else if (amount < 0)
+            Healed?.Invoke(CurrentHealth);
+    }
+
+    public void DealDamageWithoutScratch(float amount)
+    {
+        CurrentHealth -= amount;
+
+        if (CurrentHealth >= MaxHealth)
+            CurrentHealth = MaxHealth;
+
+        if (CurrentHealth <= 0)
+            IsDying?.Invoke();
+        else if (amount > 0)
+        {
+            TookDamageByOtherMeans?.Invoke(CurrentHealth);
+        }
         else if (amount < 0)
             Healed?.Invoke(CurrentHealth);
     }
