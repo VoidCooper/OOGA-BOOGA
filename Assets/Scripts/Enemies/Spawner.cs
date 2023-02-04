@@ -37,6 +37,12 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         TargetAround = GlobalReferenceManager.Instance.Player.transform;
+        GameManager.Instance.OnEndIsNigh += OneEndIsNigh;
+    }
+
+    private void OneEndIsNigh()
+    {
+        gameObject.BroadcastMessage("StartFleeing");
     }
 
     private void Update()
