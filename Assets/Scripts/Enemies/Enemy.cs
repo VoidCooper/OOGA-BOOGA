@@ -80,5 +80,14 @@ public class Enemy : MonoBehaviour
     public void SpwanInit()
     {
         m_health.CurrentHealth = m_health.MaxHealth;
+
+        int childCount = transform.childCount;
+
+        for (int i = childCount - 1; i > 0; i--)
+        {
+            Transform child = transform.GetChild(i);
+            if (child.tag == "Projectile")
+                Destroy(child.gameObject);
+        }
     }
 }
