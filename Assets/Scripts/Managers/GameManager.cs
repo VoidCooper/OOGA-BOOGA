@@ -39,12 +39,18 @@ public class GameManager : MonoBehaviour
         _gameTimer.StartTimer(_gameLength);
     }
 
+    private void OnDestroy()
+    {
+        _gameTimer.OnTimerCompleted -= BeginTheEndofTime;
+    }
+
     public void BeginTheEndofTime()
     {
         Debug.Log("THE END IS NIGH!");
         OnEndIsNigh?.Invoke();
 
         // TODO: End game
+        // SEE END OF TIME! (Script)
     }
 
     public void PauseGame()

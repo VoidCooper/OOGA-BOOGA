@@ -59,7 +59,7 @@ public class GameUI : MonoBehaviour
     private void Update()
     {
         Hunger(_playerHunger.CurrentHunger);
-        float minutes = Mathf.Round(GameManager.Instance.RemainingTime / 60);
+        float minutes = Mathf.Floor(GameManager.Instance.RemainingTime / 60);
         _TimerText.text = $"{minutes:00}:{GameManager.Instance.RemainingTime - minutes * 60:00}";
     }
 
