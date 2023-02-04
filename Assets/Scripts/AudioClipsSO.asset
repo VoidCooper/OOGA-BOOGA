@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9ddcda20deb1e45a592931af8e50f4, type: 3}
+  m_Name: AudioClipsSO
+  m_EditorClassIdentifier: 
+  player_jump_clips:
+  - {fileID: 8300000, guid: 642c45bddd9fa5a488d30f5cf6d582a7, type: 3}
+  - {fileID: 8300000, guid: 8cffe8272c3f2a945b64631c355d9ad6, type: 3}
+  - {fileID: 8300000, guid: b3469f6f730f80f40a18a7fd9d1d3d4f, type: 3}
+  - {fileID: 8300000, guid: 8aec2c61e66da6342bc6235d70f38f54, type: 3}
+  player_hurt_clips:
+  - {fileID: 8300000, guid: d01149a3c8114bc4080acf6675bd0d14, type: 3}
+  - {fileID: 8300000, guid: be805e48ea9a0ca4192ebac262567da2, type: 3}
+  - {fileID: 8300000, guid: 14d4431de6813404e89007cffd4d903e, type: 3}
+  - {fileID: 8300000, guid: 26d7b857540fae14a8343b96d3b658b7, type: 3}
+  player_throw_clips:
+  - {fileID: 8300000, guid: 789166b9175d5b34baca0e67cd0d3eeb, type: 3}
+  - {fileID: 8300000, guid: b70a4ef9ea67a1e4d8d4aa93214fc25e, type: 3}
+  - {fileID: 8300000, guid: 8357d35e1f512fa4eafd15e7d009e77c, type: 3}
+  - {fileID: 8300000, guid: 27cccd0d0efd3134485a2bf73a36b847, type: 3}
+  - {fileID: 8300000, guid: 9ad05a7691da4a94fb60c3664541b851, type: 3}
+  - {fileID: 8300000, guid: 239382c9828979b4e944c44b13dde00b, type: 3}
+  - {fileID: 8300000, guid: dd1c80a16c8f15249895636e5d12fbb3, type: 3}
+  - {fileID: 8300000, guid: 9ca7300a360035940af9bde56776f8ca, type: 3}
+  - {fileID: 8300000, guid: 1cc1f9345993071488fe9f4cb4d75912, type: 3}
+  player_eat_clips:
+  - {fileID: 8300000, guid: bae50205f4a32a04c89fbddedcf26628, type: 3}
+  - {fileID: 8300000, guid: e9e34cb12f55b2341bc4b8acaa381e0e, type: 3}
+  - {fileID: 8300000, guid: e2fa051ee0b143c439716ab043a625ab, type: 3}
+  - {fileID: 8300000, guid: 433b68e58d67ed44f8621ef99d30ee40, type: 3}
+  - {fileID: 8300000, guid: cf835080145ce194885a38124b4a02da, type: 3}
+  - {fileID: 8300000, guid: b3ec09d5b3cac97409638a583b8506cc, type: 3}
+  - {fileID: 8300000, guid: e62ce17fc84bbf6459fc0b9bee64e690, type: 3}
+  - {fileID: 8300000, guid: efbc3438c886d544abb5c6b37af47886, type: 3}
+  - {fileID: 8300000, guid: ad034b3cfed54a743ba36079f8c42992, type: 3}
+  - {fileID: 8300000, guid: 0f3abe142d95c734daec4c0d1f61ba6c, type: 3}
+  - {fileID: 8300000, guid: 335e3f374dffc3a4d8ff09bb0c657f3f, type: 3}
+  - {fileID: 8300000, guid: 150a9d0887dbba74bb48a8585f8d94f2, type: 3}
+  - {fileID: 8300000, guid: 56acac28d15aa13488527f43d7fc5b02, type: 3}
+  tiger_roar_clips:
+  - {fileID: 8300000, guid: 2e5977e0679ac3c4f81c74e49d166af0, type: 3}
+  boar_roar_clips:
+  - {fileID: 8300000, guid: 040c3fda2b7516345b795a311ae30fed, type: 3}
+  - {fileID: 8300000, guid: 5c298e070d285624c92ad0493c6fa556, type: 3}
+  penquin_noot_clips:
+  - {fileID: 8300000, guid: 97107f38d6512214987e7873ae5824a1, type: 3}
+  - {fileID: 8300000, guid: ceeaf11f353dbea45863ee96d0a55256, type: 3}
