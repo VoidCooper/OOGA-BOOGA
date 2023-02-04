@@ -98,4 +98,11 @@ public class Enemy : MonoBehaviour
                 Destroy(child.gameObject);
         }
     }
+
+    public void StartFleeing()
+    {
+        m_movement.IsFleeing = true;
+        m_movement.MovementSpeed *= 2;
+        m_animator.TimeOnFrame /= 2;
+    }
 }

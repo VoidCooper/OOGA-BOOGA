@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private static GameManager m_instance;
     private float _gameSpeed;
     private float _unpausedSpeed;
-    private float _gameLength = 600;
+    private float _gameLength = 10;
     private ScaledOneshotTimer _gameTimer;
 
     public float gameLength { get { return _gameLength; } }
@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         _unpausedSpeed = _gameSpeed;
         _gameSpeed = 0f;
+        _gameTimer.StopTimer();
         OnGamePaused?.Invoke();
     }
 
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
     {
         _gameSpeed = _unpausedSpeed;
         OnGameUnPaused?.Invoke();
+        _gameTimer.ResumeTimer();
     }
 
     public void ChangeGameSpeed(float speed)

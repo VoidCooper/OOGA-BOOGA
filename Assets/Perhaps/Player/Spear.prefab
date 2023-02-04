@@ -78,6 +78,7 @@ MonoBehaviour:
   maxLifeTime: 15
   damage: 50
   isPearcing: 0
+  smokePuff: {fileID: 1517514551709037316, guid: cba7a951204c87c46be3d177f00f5475, type: 3}
 --- !u!65 &2293279716251381799
 BoxCollider:
   m_ObjectHideFlags: 0
