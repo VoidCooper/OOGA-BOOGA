@@ -8,6 +8,7 @@ public class SpearProjectile : MonoBehaviour
     public float maxLifeTime = 10f;
     public float damage = 50f;
     public bool isPearcing = false;
+    public GameObject smokePuff;
 
     private Rigidbody rb;
     private BoxCollider boxCollider;
@@ -40,6 +41,11 @@ public class SpearProjectile : MonoBehaviour
         {
             Destroy(rb);
             boxCollider.enabled = false;
+
+            if (smokePuff)
+            {
+                Instantiate(smokePuff, collision.GetContact(0).point, Quaternion.identity);
+            }
         }
     }
 
