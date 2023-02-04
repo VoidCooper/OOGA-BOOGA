@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     public float contactDistanceSqrt = 0.86f;
     public bool CheckContact = false;
     public event System.Action ContactEvent;
+    public bool IsFleeing = false;
+    public bool IsStopped = false;
 
     private void Awake()
     {
@@ -21,9 +23,17 @@ public class EnemyMovement : MonoBehaviour
         if (Target != null)
         {
             transform.LookAt(Target);
+
+            if (IsStopped)
+                return;
+
             Vector3 movement = transform.forward * MovementSpeed * Time.deltaTime;
             movement.y = 0;
-            transform.localPosition += movement;
+
+            if (IsFleeing)
+                transform.localPosition -= movement;
+            else
+                transform.localPosition += movement;
 
             if (Vector3.SqrMagnitude(transform.position - Target.position) < contactDistanceSqrt)
             {

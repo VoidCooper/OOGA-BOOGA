@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c3726a72ee02184e8a3c207a6af1bf7
+guid: 3ecaab6974d6a6e4ab08d05d7fb71ca5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,8 +37,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -49,8 +49,8 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 57, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bear_0
+      name: caveperson_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e70211c3d25270347b56d6700662ae9d
-      internalID: 2006130168
+      spriteID: 6d274ff2f0d425440bc26497f20cd765
+      internalID: -1432183706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bear_1
+      name: caveperson_1
       rect:
         serializedVersion: 2
         x: 57
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9086ccd97d206e348a44be5157d30225
-      internalID: -1508505697
+      spriteID: 82958dc97c4776e438cdf73e40f332ed
+      internalID: -1983387260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bear_2
+      name: caveperson_2
       rect:
         serializedVersion: 2
         x: 114
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4437ce10f189a2499ac589fd3891c0d
-      internalID: -1192862191
+      spriteID: 120c8949bd1780948a10c6a95444b504
+      internalID: 111422875
       vertices: []
       indices: 
       edges: []
@@ -172,17 +172,17 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 5f8474aea7545f44aada15e05397cbd6
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bear_2: -1192862191
-      bear_0: 2006130168
-      bear_1: -1508505697
+      caveperson_2: 111422875
+      caveperson_1: -1983387260
+      caveperson_0: -1432183706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
