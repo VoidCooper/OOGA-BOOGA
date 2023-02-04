@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2366613059087001171
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984074, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: MovementSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984077, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_Name
+      value: Tikru
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080139673038081, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1844231245, guid: 41683fdb64eabd44ba2ab5f831c28f47, type: 3}
+    - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: TimeOnFrame
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: AnimationSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1844231245, guid: 41683fdb64eabd44ba2ab5f831c28f47, type: 3}
+    - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: AnimationSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -215745397, guid: 41683fdb64eabd44ba2ab5f831c28f47, type: 3}
+    - target: {fileID: 7577080139673038083, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080139673038083, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080139673038083, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080139673038083, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}

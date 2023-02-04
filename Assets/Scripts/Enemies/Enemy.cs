@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
 
     private void IsDying()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void ContactEvent()
@@ -45,8 +45,13 @@ public class Enemy : MonoBehaviour
         movement.y = 0;
         transform.localPosition -= movement;
 
-
+        m_health.DealDamage(1000);
         Health targetHealth = m_movement.Target.GetComponent<Health>();
         targetHealth?.DealDamage(Damage);
+    }
+
+    public void SpwanInit()
+    {
+        m_health.CurrentHealth = m_health.MaxHealth;
     }
 }
