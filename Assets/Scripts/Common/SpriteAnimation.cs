@@ -12,6 +12,12 @@ public class SpriteAnimation : MonoBehaviour
     private float m_elapsedTime = 0;
     private int m_currentIndex = 0;
 
+    public Sprite OverrideSprite;
+    public bool Loop = true;
+    public bool Stopped = false;
+
+    public event System.Action AnimationEnded;
+
     private void Awake()
     {
         m_renderer = gameObject.GetComponent<SpriteRenderer>();
@@ -19,6 +25,17 @@ public class SpriteAnimation : MonoBehaviour
 
     private void Update()
     {
+        if (Stopped)
+        {
+            return;
+        }
+
+        if (OverrideSprite != null)
+        {
+            m_renderer.sprite = OverrideSprite;
+            return;
+        }
+
         m_elapsedTime += Time.deltaTime;
 
         if (m_elapsedTime >= TimeOnFrame)
@@ -28,7 +45,16 @@ public class SpriteAnimation : MonoBehaviour
             m_currentIndex++;
 
             if (m_currentIndex == AnimationSprites.Length)
-                m_currentIndex = 0;
+            {
+                if (Loop)
+                    m_currentIndex = 0;
+                else if (!Stopped)
+                {
+                    Stopped = true;
+                    AnimationEnded?.Invoke();
+                    m_currentIndex = AnimationSprites.Length - 1;
+                }
+            }
         }
     }
 }
