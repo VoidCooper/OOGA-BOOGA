@@ -16,6 +16,7 @@ public class PlayerHand : MonoBehaviour
 
     private bool _isThrowOnCooldown;
     private Animator _animationComponent;
+    private bool _disabled = false;
 
     public void Awake()
     {
@@ -24,6 +25,9 @@ public class PlayerHand : MonoBehaviour
 
     public void ShootSpear()
     {
+        if (_disabled)
+            return;
+
         if (_isThrowOnCooldown)
             return;
 
@@ -34,6 +38,11 @@ public class PlayerHand : MonoBehaviour
         _isThrowOnCooldown = true;
         Invoke(nameof(InstantiateSpear), spearThrowDelay);
         Invoke(nameof(ResetThrowCooldown), spearThrowCooldown);
+    }
+
+    public void Disable()
+    {
+        _disabled = true;
     }
 
     private void InstantiateSpear()

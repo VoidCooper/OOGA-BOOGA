@@ -6,9 +6,12 @@ public class EndOfTimesScript : MonoBehaviour
 {
     private ScaledOneshotTimer StartZoomTimer;
     private ScaledOneshotTimer ZoomTimer;
+    private ScaledOneshotTimer DisableTimer;
     public Camera EndCamera;
     public Transform FollowTarget;
     public GameObject EndModel;
+    public GameObject Doomsday;
+    public string[] Endings;
     private Health m_playerHealth;
     private bool isDead = false;
 
@@ -18,8 +21,10 @@ public class EndOfTimesScript : MonoBehaviour
     {
         StartZoomTimer = gameObject.AddComponent<ScaledOneshotTimer>();
         ZoomTimer = gameObject.AddComponent<ScaledOneshotTimer>();
+        DisableTimer = gameObject.AddComponent<ScaledOneshotTimer>();
         StartZoomTimer.OnTimerCompleted += StartZoomTimer_OnTimerCompleted;
         ZoomTimer.OnTimerCompleted += ZoomTimer_OnTimerCompleted;
+        DisableTimer.OnTimerCompleted += DisableTimer_OnTimerCompleted;
     }
 
     private void Start()
@@ -48,11 +53,21 @@ public class EndOfTimesScript : MonoBehaviour
         if (isDead)
             return;
 
+        int i = Random.Range(0, Endings.Length - 1);
+        Doomsday.GetComponent<Animator>().SetBool(Endings[i], true);
         ZoomTimer.StartTimer(10);
+        DisableTimer.StartTimer(3.5f);
         EndCamera.gameObject.SetActive(true);
         EndCamera.transform.position = Camera.main.transform.position;
         Camera.main.gameObject.SetActive(false);
         EndModel.SetActive(true);
+    }
+
+    private void DisableTimer_OnTimerCompleted()
+    {
+        var playerfps = GlobalReferenceManager.Instance.Player.GetComponent<PlayerFPSMovement>();
+        playerfps.playerHand.Disable();
+        playerfps.Disable();
     }
 
     private void Update()
@@ -60,7 +75,7 @@ public class EndOfTimesScript : MonoBehaviour
         if (!ZoomTimer.IsRunning)
             return;
         EndCamera.transform.LookAt(FollowTarget);
-        EndCamera.transform.Translate(Vector3.forward * -Time.deltaTime * 3);
+        EndCamera.transform.Translate(6 * -Time.deltaTime * Vector3.forward);
     }
 
     private void playerHealth_IsDying()
