@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AudioClipsSO
   m_EditorClassIdentifier: 
   instantiatedAudioSource: {fileID: 2467451254882666351, guid: 8f1fe23ef8ef9f043b884f1d95d766ab, type: 3}
+  volume: 0.6
   player_jump_clips:
   - {fileID: 8300000, guid: 642c45bddd9fa5a488d30f5cf6d582a7, type: 3}
   - {fileID: 8300000, guid: 8cffe8272c3f2a945b64631c355d9ad6, type: 3}
@@ -61,3 +62,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f22468e9c3c5295438261eff3bbd1386, type: 3}
   - {fileID: 8300000, guid: a782b0747451f3043b913495f5a37ebb, type: 3}
   - {fileID: 8300000, guid: 50338bcef8230d643b1013845bd5df20, type: 3}
+  gameMusicLoop: {fileID: 8300000, guid: bee3f27e44efe5e40977705af9396f6d, type: 3}
+  suspenseMusic: {fileID: 8300000, guid: 900274757cfb8814984bf85d276c4340, type: 3}
+  endThoom: {fileID: 8300000, guid: 370b3bacca51d0a4e919f052b3e06f5f, type: 3}

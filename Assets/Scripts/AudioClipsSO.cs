@@ -14,6 +14,13 @@ public enum AudioClipType
     SpearHit = 8,
 }
 
+public enum SingleAudioClips
+{
+    GameMusic = 0,
+    SuspenseMusic = 1,
+    EndThoom = 2,
+}
+
 [CreateAssetMenu(fileName = "AudioClipsSO", menuName = "ScriptableObjects/AudioClipManager", order = 1)]
 public class AudioClipsSO : ScriptableObject
 {
@@ -31,6 +38,9 @@ public class AudioClipsSO : ScriptableObject
     public List<AudioClip> penquin_noot_clips;
     public List<AudioClip> spear_hit_clips;
     public List<AudioClip> spear_thud_clips;
+    public AudioClip gameMusicLoop;
+    public AudioClip suspenseMusic;
+    public AudioClip endThoom;
 
     public AudioClip GetAudioClip(AudioClipType clipType)
     {
@@ -71,6 +81,27 @@ public class AudioClipsSO : ScriptableObject
         return clip;
     }
 
+    public AudioClip GetAudioClip(SingleAudioClips audioClipType)
+    {
+        AudioClip clip;
+
+        switch (audioClipType)
+        {
+            default:
+            case SingleAudioClips.GameMusic:
+                clip = gameMusicLoop;
+                break;
+            case SingleAudioClips.SuspenseMusic:
+                clip = suspenseMusic;
+                break;
+            case SingleAudioClips.EndThoom:
+                clip = endThoom;
+                break;
+        }
+
+        return clip;
+    }
+
     public void PlayRandomAudioClipAtPoint(Transform sourcePosition, AudioClipType clipType)
     {
         AudioSource.PlayClipAtPoint(GetAudioClip(clipType), sourcePosition.position + Vector3.forward * 0.15f);
@@ -81,5 +112,12 @@ public class AudioClipsSO : ScriptableObject
         GameObject go = Instantiate(instantiatedAudioSource.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
         TempAudioSource audioSource = go.GetComponent<TempAudioSource>();
         audioSource.PlayClip(clipType, volume);
+    }
+
+    public void PlayAudioClipAtNewAudioSource(SingleAudioClips selectedAudioClip)
+    {
+        GameObject go = Instantiate(instantiatedAudioSource.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+        TempAudioSource audioSource = go.GetComponent<TempAudioSource>();
+        audioSource.PlayClip(GetAudioClip(selectedAudioClip), volume);
     }
 }
