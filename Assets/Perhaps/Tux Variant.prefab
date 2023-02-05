@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,18 +52,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984074, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: MovementSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: HurtSprite
       value: 
       objectReference: {fileID: 1029995989, guid: fc425d2abb107504786165f18feb9d0c, type: 3}
     - target: {fileID: 7577080138904984077, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Name
-      value: Tux
+      value: Tux Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038081, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1938822909, guid: fc425d2abb107504786165f18feb9d0c, type: 3}
+    - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: TimeOnFrame
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: AnimationSprites.Array.data[0]
       value: 

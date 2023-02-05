@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984074, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: MovementSpeed
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: HurtSprite
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: -1230606613, guid: 37888d395c4a8ca4383dd5bba01ada8a, type: 3}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: TimeOnFrame
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: AnimationSprites.Array.data[0]

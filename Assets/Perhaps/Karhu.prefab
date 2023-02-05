@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984073, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54,7 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984074, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: MovementSpeed
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984075, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: MaxHealth
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: HurtSprite
@@ -74,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 2006130168, guid: 8c3726a72ee02184e8a3c207a6af1bf7, type: 3}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: TimeOnFrame
-      value: 0.25
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 7577080139673038082, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: AnimationSprites.Array.data[0]
