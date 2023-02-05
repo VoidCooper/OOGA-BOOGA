@@ -9,6 +9,7 @@ public class SpearProjectile : MonoBehaviour
     public float damage = 50f;
     public bool isPearcing = false;
     public GameObject smokePuff;
+    public AudioClipsSO audioClipsSO;
 
     private Rigidbody rb;
     private BoxCollider boxCollider;
@@ -45,6 +46,7 @@ public class SpearProjectile : MonoBehaviour
             if (smokePuff)
             {
                 Instantiate(smokePuff, collision.GetContact(0).point, Quaternion.identity);
+                audioClipsSO.PlayRandomAudioClipAtNewAudioSource(transform, AudioClipType.SpearThud);
             }
         }
     }
@@ -61,6 +63,8 @@ public class SpearProjectile : MonoBehaviour
                 Destroy(rb);
                 boxCollider.enabled = false;
             }
+
+            audioClipsSO.PlayRandomAudioClipAtNewAudioSource(transform, AudioClipType.SpearHit);
         }
     }
 }

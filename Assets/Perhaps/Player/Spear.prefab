@@ -79,6 +79,7 @@ MonoBehaviour:
   damage: 50
   isPearcing: 0
   smokePuff: {fileID: 1517514551709037316, guid: cba7a951204c87c46be3d177f00f5475, type: 3}
+  audioClipsSO: {fileID: 11400000, guid: 45f4f7640d7d7084597287381dd5681b, type: 2}
 --- !u!65 &2293279716251381799
 BoxCollider:
   m_ObjectHideFlags: 0

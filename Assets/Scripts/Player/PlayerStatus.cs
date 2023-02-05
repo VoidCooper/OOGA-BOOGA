@@ -18,11 +18,11 @@ public class PlayerStatus : MonoBehaviour
 
     private void TakeDamage(float value)
     {
-        audioClipsSo.PlayRandomAudioClip(transform, AudioClipType.PlayerHurt);
+        audioClipsSo.PlayRandomAudioClipAtNewAudioSource(transform, AudioClipType.PlayerHurt);
     }
 
     private void EatMeat()
     {
-        audioClipsSo.PlayRandomAudioClip(transform, AudioClipType.PlayerEat);
+        audioClipsSo.PlayRandomAudioClipAtNewAudioSource(transform, AudioClipType.PlayerEat);
     }
 }

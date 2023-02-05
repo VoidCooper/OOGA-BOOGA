@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +10,18 @@ public enum AudioClipType
     TigerRoar = 4,
     BoarRoar = 5,
     PenquinNoot = 6,
+    SpearThud = 7,
+    SpearHit = 8,
 }
 
 [CreateAssetMenu(fileName = "AudioClipsSO", menuName = "ScriptableObjects/AudioClipManager", order = 1)]
 public class AudioClipsSO : ScriptableObject
-{ 
+{
+    public TempAudioSource instantiatedAudioSource;
+
+    [Range(0, 1)]
+    public float volume;
+
     public List<AudioClip> player_jump_clips;
     public List<AudioClip> player_hurt_clips;
     public List<AudioClip> player_throw_clips;
@@ -23,8 +29,10 @@ public class AudioClipsSO : ScriptableObject
     public List<AudioClip> tiger_roar_clips;
     public List<AudioClip> boar_roar_clips;
     public List<AudioClip> penquin_noot_clips;
+    public List<AudioClip> spear_hit_clips;
+    public List<AudioClip> spear_thud_clips;
 
-    public void PlayRandomAudioClip(Transform sourcePosition, AudioClipType clipType)
+    public AudioClip GetAudioClip(AudioClipType clipType)
     {
         AudioClip clip;
 
@@ -52,8 +60,26 @@ public class AudioClipsSO : ScriptableObject
             case AudioClipType.PenquinNoot:
                 clip = penquin_noot_clips[Random.Range(0, penquin_noot_clips.Count - 1)];
                 break;
+            case AudioClipType.SpearThud:
+                clip = spear_thud_clips[Random.Range(0, spear_thud_clips.Count - 1)];
+                break;
+            case AudioClipType.SpearHit:
+                clip = spear_hit_clips[Random.Range(0, spear_hit_clips.Count - 1)];
+                break;
         }
 
-        AudioSource.PlayClipAtPoint(clip, sourcePosition.position + Vector3.forward * 0.15f);
+        return clip;
+    }
+
+    public void PlayRandomAudioClipAtPoint(Transform sourcePosition, AudioClipType clipType)
+    {
+        AudioSource.PlayClipAtPoint(GetAudioClip(clipType), sourcePosition.position + Vector3.forward * 0.15f);
+    }
+
+    public void PlayRandomAudioClipAtNewAudioSource(Transform sourcePosition, AudioClipType clipType)
+    {
+        GameObject go = Instantiate(instantiatedAudioSource.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+        TempAudioSource audioSource = go.GetComponent<TempAudioSource>();
+        audioSource.PlayClip(clipType, volume);
     }
 }

@@ -121,7 +121,7 @@ public class PlayerFPSMovement : MonoBehaviour
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
 
-        audioClipsSo.PlayRandomAudioClip(transform, AudioClipType.PlayerJump);
+        audioClipsSo.PlayRandomAudioClipAtNewAudioSource(transform, AudioClipType.PlayerJump);
     }
 
     private void ResetJump()

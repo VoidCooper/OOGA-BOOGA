@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9ddcda20deb1e45a592931af8e50f4, type: 3}
   m_Name: AudioClipsSO
   m_EditorClassIdentifier: 
+  instantiatedAudioSource: {fileID: 2467451254882666351, guid: 8f1fe23ef8ef9f043b884f1d95d766ab, type: 3}
   player_jump_clips:
   - {fileID: 8300000, guid: 642c45bddd9fa5a488d30f5cf6d582a7, type: 3}
   - {fileID: 8300000, guid: 8cffe8272c3f2a945b64631c355d9ad6, type: 3}
@@ -23,15 +24,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 14d4431de6813404e89007cffd4d903e, type: 3}
   - {fileID: 8300000, guid: 26d7b857540fae14a8343b96d3b658b7, type: 3}
   player_throw_clips:
-  - {fileID: 8300000, guid: 789166b9175d5b34baca0e67cd0d3eeb, type: 3}
-  - {fileID: 8300000, guid: b70a4ef9ea67a1e4d8d4aa93214fc25e, type: 3}
-  - {fileID: 8300000, guid: 8357d35e1f512fa4eafd15e7d009e77c, type: 3}
-  - {fileID: 8300000, guid: 27cccd0d0efd3134485a2bf73a36b847, type: 3}
-  - {fileID: 8300000, guid: 9ad05a7691da4a94fb60c3664541b851, type: 3}
-  - {fileID: 8300000, guid: 239382c9828979b4e944c44b13dde00b, type: 3}
-  - {fileID: 8300000, guid: dd1c80a16c8f15249895636e5d12fbb3, type: 3}
-  - {fileID: 8300000, guid: 9ca7300a360035940af9bde56776f8ca, type: 3}
-  - {fileID: 8300000, guid: 1cc1f9345993071488fe9f4cb4d75912, type: 3}
+  - {fileID: 8300000, guid: b414c331a533f784a8197cf3ef47e580, type: 3}
+  - {fileID: 8300000, guid: 812ba82e003a0af4fb5b0f0fd3876874, type: 3}
+  - {fileID: 8300000, guid: 3b4e6db44e21d8a41827738da235726d, type: 3}
+  - {fileID: 8300000, guid: f15e43da381d5824aaa4fb897ca3bedf, type: 3}
+  - {fileID: 8300000, guid: 70a2ab6726075dc488297f9634533795, type: 3}
+  - {fileID: 8300000, guid: e383ad08736108441808fcb7c8a703a8, type: 3}
+  - {fileID: 8300000, guid: 5f631dc3e6e0cb846803bb53b9e45ba4, type: 3}
   player_eat_clips:
   - {fileID: 8300000, guid: bae50205f4a32a04c89fbddedcf26628, type: 3}
   - {fileID: 8300000, guid: e9e34cb12f55b2341bc4b8acaa381e0e, type: 3}
@@ -54,3 +53,11 @@ MonoBehaviour:
   penquin_noot_clips:
   - {fileID: 8300000, guid: 97107f38d6512214987e7873ae5824a1, type: 3}
   - {fileID: 8300000, guid: ceeaf11f353dbea45863ee96d0a55256, type: 3}
+  spear_hit_clips:
+  - {fileID: 8300000, guid: 1b9f7228bb863044e999088d9dfe5e99, type: 3}
+  - {fileID: 8300000, guid: d378e5d65b79e694ea18df1d80d89374, type: 3}
+  - {fileID: 8300000, guid: 1d14344bfd8009f41a8d6e159b1abbf8, type: 3}
+  spear_thud_clips:
+  - {fileID: 8300000, guid: f22468e9c3c5295438261eff3bbd1386, type: 3}
+  - {fileID: 8300000, guid: a782b0747451f3043b913495f5a37ebb, type: 3}
+  - {fileID: 8300000, guid: 50338bcef8230d643b1013845bd5df20, type: 3}

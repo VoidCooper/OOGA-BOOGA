@@ -29,7 +29,7 @@ public class PlayerHand : MonoBehaviour
 
         _animationComponent.SetTrigger("ThrowSpearTrigger");
 
-        audioClipsSo.PlayRandomAudioClip(transform, AudioClipType.PlayerThrow);
+        audioClipsSo.PlayRandomAudioClipAtNewAudioSource(transform, AudioClipType.PlayerThrow);
 
         _isThrowOnCooldown = true;
         Invoke(nameof(InstantiateSpear), spearThrowDelay);
