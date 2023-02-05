@@ -25,9 +25,11 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private TMPro.TextMeshProUGUI _TimerText;
 
-    [Range(0f, 1f)]
+    [Range(0f, 100f)]
     [SerializeField]
-    private float _lowThreshold = 0.25f;
+    private float _lowThreshold = 20f;
+
+    private bool firstScale = false;
 
     private void Awake()
     {
@@ -77,6 +79,10 @@ public class GameUI : MonoBehaviour
     public void HealPlayer(float normHP)
     {
         UpdateSliderValue(HitpointSlider, normHP);
+        if (firstScale)
+            firstScale = !firstScale;
+        else
+            HitpointSlider.ImageAnim.SetTrigger("SCALE");
     }
 
     public void Hunger(float normHunger)

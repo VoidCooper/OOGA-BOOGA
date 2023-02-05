@@ -20,9 +20,11 @@ public class GameManager : MonoBehaviour
     private float _unpausedSpeed;
     private float _gameLength = 180;
     private ScaledOneshotTimer _gameTimer;
+    private bool _gamePaused = false;
 
     public float gameLength { get { return _gameLength; } }
     public float GameSpeed { get { return _gameSpeed; } }
+    public bool GamePaused { get { return _gamePaused; } }
 
     public float RemainingTime { get { return _gameTimer.TimeLeft; } }
     
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
     {
         _unpausedSpeed = _gameSpeed;
         _gameSpeed = 0f;
+        _gamePaused = true;
         _gameTimer.StopTimer();
         OnGamePaused?.Invoke();
     }
@@ -62,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         _gameSpeed = _unpausedSpeed;
         OnGameUnPaused?.Invoke();
+        _gamePaused = false;
         _gameTimer.ResumeTimer();
     }
 
