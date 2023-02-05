@@ -17,10 +17,17 @@ public class TempAudioSource : MonoBehaviour
         Invoke(nameof(DestroyMe), LifeTime);
     }
 
-    public void PlayClip(AudioClipType clipType, float volume)
+    public void PlayClip(AudioClipType clipType, float volume, bool hasRandomPitch = false)
     {
-        audioSource.clip = audioClipsSO.GetAudioClip(clipType);
-        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        PlayClip(audioClipsSO.GetAudioClip(clipType), volume, hasRandomPitch);
+    }
+
+    public void PlayClip(AudioClip audioClip, float volume, bool hasRandomPitch = false)
+    {
+        audioSource.clip = audioClip;
+        audioSource.volume = volume;
+        audioSource.pitch = hasRandomPitch ? Random.Range(0.9f, 1.1f) : 1f;
+        LifeTime = 2f + audioSource.clip.length;
         audioSource.Play();
     }
 
