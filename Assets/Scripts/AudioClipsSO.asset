@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AudioClipsSO
   m_EditorClassIdentifier: 
   instantiatedAudioSource: {fileID: 2467451254882666351, guid: 8f1fe23ef8ef9f043b884f1d95d766ab, type: 3}
+  volume: 0.6
   player_jump_clips:
   - {fileID: 8300000, guid: 642c45bddd9fa5a488d30f5cf6d582a7, type: 3}
   - {fileID: 8300000, guid: 8cffe8272c3f2a945b64631c355d9ad6, type: 3}
