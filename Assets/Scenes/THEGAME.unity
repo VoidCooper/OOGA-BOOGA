@@ -4836,6 +4836,7 @@ MonoBehaviour:
   - greenball
   - bigfoot
   - pyramid
+  audioClipsSO: {fileID: 11400000, guid: 45f4f7640d7d7084597287381dd5681b, type: 2}
   GameOverObjectScreenthing: {fileID: 1138921005}
 --- !u!4 &1727589986 stripped
 Transform:

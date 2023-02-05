@@ -12,6 +12,7 @@ public class EndOfTimesScript : MonoBehaviour
     public GameObject EndModel;
     public GameObject Doomsday;
     public string[] Endings;
+    public AudioClipsSO audioClipsSO;
     private Health m_playerHealth;
     private bool isDead = false;
 
@@ -49,6 +50,11 @@ public class EndOfTimesScript : MonoBehaviour
         Cursor.visible = true;
     }
 
+    private void PlayEndThoom()
+    {
+        audioClipsSO.PlayAudioClipAtNewAudioSource(SingleAudioClips.EndThoom);
+    }
+
     private void StartZoomTimer_OnTimerCompleted()
     {
         if (isDead)
@@ -62,6 +68,9 @@ public class EndOfTimesScript : MonoBehaviour
         EndCamera.transform.position = Camera.main.transform.position;
         Camera.main.gameObject.SetActive(false);
         EndModel.SetActive(true);
+
+        audioClipsSO.PlayAudioClipAtNewAudioSource(SingleAudioClips.SuspenseMusic);
+        Invoke(nameof(PlayEndThoom), 5f);
     }
 
     private void DisableTimer_OnTimerCompleted()
