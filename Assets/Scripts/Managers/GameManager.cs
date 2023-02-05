@@ -18,12 +18,14 @@ public class GameManager : MonoBehaviour
     private static GameManager m_instance;
     private float _gameSpeed;
     private float _unpausedSpeed;
-    private float _gameLength = 10;
+    private float _gameLength = 300;
     private ScaledOneshotTimer _gameTimer;
 
     public float gameLength { get { return _gameLength; } }
     public float GameSpeed { get { return _gameSpeed; } }
 
+    public float RemainingTime { get { return _gameTimer.TimeLeft; } }
+    
     // Events
     public event System.Action OnGameUnPaused;
     public event System.Action OnGamePaused;
@@ -37,12 +39,18 @@ public class GameManager : MonoBehaviour
         _gameTimer.StartTimer(_gameLength);
     }
 
+    private void OnDestroy()
+    {
+        _gameTimer.OnTimerCompleted -= BeginTheEndofTime;
+    }
+
     public void BeginTheEndofTime()
     {
         Debug.Log("THE END IS NIGH!");
         OnEndIsNigh?.Invoke();
 
         // TODO: End game
+        // SEE END OF TIME! (Script)
     }
 
     public void PauseGame()

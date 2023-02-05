@@ -18,6 +18,11 @@ public class GameMaster : MonoBehaviour
         GameManager.Instance.OnEndIsNigh += Instance_OnEndIsNigh;
     }
 
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnEndIsNigh -= Instance_OnEndIsNigh;
+    }
+
     private void Instance_OnEndIsNigh()
     {
         SpawnerObject.GetComponent<Spawner>().SpawnCount = 0;
