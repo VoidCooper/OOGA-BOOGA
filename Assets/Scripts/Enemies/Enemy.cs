@@ -15,12 +15,17 @@ public class Enemy : MonoBehaviour
     public float HurtTime = 0;
     public GameObject pickupObject;
     public GameObject BloodParticles;
+    public AudioClipsSO audioClipsSO;
+    public AudioClipType audioType = AudioClipType.None;
+
+    private float m_currentDelayForAudio = 5f;
 
     private void Awake()
     {
         m_movement = gameObject.GetComponent<EnemyMovement>();
         m_health = gameObject.GetComponent<Health>();
         m_animator = transform.GetChild(0).GetComponent<SpriteAnimation>();
+        m_currentDelayForAudio += Random.Range(2f, 15f);
     }
 
     private void Start()
@@ -53,6 +58,13 @@ public class Enemy : MonoBehaviour
         {
             m_movement.IsStopped = false;
             m_animator.OverrideSprite = null;
+        }
+
+        m_currentDelayForAudio -= Time.deltaTime;
+        if (m_currentDelayForAudio < 0)
+        {
+            m_currentDelayForAudio += Random.Range(20f, 40f);
+            audioClipsSO.PlayRandomAudioClipAtPoint(transform, audioType);
         }
     }
 

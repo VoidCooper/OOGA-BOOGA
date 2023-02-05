@@ -84,7 +84,10 @@ MonoBehaviour:
   Damage: 10
   HurtSprite: {fileID: 0}
   HurtTime: 0
+  pickupObject: {fileID: 0}
   BloodParticles: {fileID: 7893943966914056883, guid: 1c4511590a74a584eb5e5e7fc6a8c143, type: 3}
+  audioClipsSO: {fileID: 11400000, guid: 45f4f7640d7d7084597287381dd5681b, type: 2}
+  audioType: -1
 --- !u!65 &3001821623601833795
 BoxCollider:
   m_ObjectHideFlags: 0

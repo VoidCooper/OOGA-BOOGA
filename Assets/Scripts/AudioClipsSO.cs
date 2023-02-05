@@ -3,6 +3,7 @@ using UnityEngine;
 
 public enum AudioClipType
 {
+    None = -1,
     PlayerJump = 0,
     PlayerHurt = 1,
     PlayerThrow = 2,
@@ -12,6 +13,8 @@ public enum AudioClipType
     PenquinNoot = 6,
     SpearThud = 7,
     SpearHit = 8,
+    Man = 9,
+    Female = 10,
 }
 
 public enum SingleAudioClips
@@ -38,6 +41,8 @@ public class AudioClipsSO : ScriptableObject
     public List<AudioClip> penquin_noot_clips;
     public List<AudioClip> spear_hit_clips;
     public List<AudioClip> spear_thud_clips;
+    public List<AudioClip> oogabooga_f_clips;
+    public List<AudioClip> oogabooga_m_clips;
     public AudioClip gameMusicLoop;
     public AudioClip suspenseMusic;
     public AudioClip endThoom;
@@ -49,6 +54,8 @@ public class AudioClipsSO : ScriptableObject
         switch (clipType)
         {
             default:
+            case AudioClipType.None:
+                return null;
             case AudioClipType.PlayerJump:
                 clip = player_jump_clips[Random.Range(0, player_jump_clips.Count - 1)];
                 break;
@@ -75,6 +82,12 @@ public class AudioClipsSO : ScriptableObject
                 break;
             case AudioClipType.SpearHit:
                 clip = spear_hit_clips[Random.Range(0, spear_hit_clips.Count - 1)];
+                break;
+            case AudioClipType.Man:
+                clip = oogabooga_m_clips[Random.Range(0, oogabooga_m_clips.Count - 1)];
+                break;
+            case AudioClipType.Female:
+                clip = oogabooga_f_clips[Random.Range(0, oogabooga_f_clips.Count - 1)];
                 break;
         }
 
@@ -104,11 +117,17 @@ public class AudioClipsSO : ScriptableObject
 
     public void PlayRandomAudioClipAtPoint(Transform sourcePosition, AudioClipType clipType)
     {
+        if (clipType == AudioClipType.None)
+            return;
+
         AudioSource.PlayClipAtPoint(GetAudioClip(clipType), sourcePosition.position + Vector3.forward * 0.15f);
     }
 
     public void PlayRandomAudioClipAtNewAudioSource(Transform sourcePosition, AudioClipType clipType)
     {
+        if (clipType == AudioClipType.None)
+            return;
+
         GameObject go = Instantiate(instantiatedAudioSource.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
         TempAudioSource audioSource = go.GetComponent<TempAudioSource>();
         audioSource.PlayClip(clipType, volume);

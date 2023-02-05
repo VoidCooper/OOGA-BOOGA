@@ -61,6 +61,10 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
+      propertyPath: audioType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577080138904984076, guid: ac32b5f89688ef443a3c8df595065af7, type: 3}
       propertyPath: HurtSprite
       value: 
       objectReference: {fileID: -1192862191, guid: 8c3726a72ee02184e8a3c207a6af1bf7, type: 3}
