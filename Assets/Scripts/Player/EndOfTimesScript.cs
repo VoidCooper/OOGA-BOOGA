@@ -14,6 +14,8 @@ public class EndOfTimesScript : MonoBehaviour
     public string[] Endings;
     private Health m_playerHealth;
     private bool isDead = false;
+    [SerializeField]
+    private GameObject[] TREES;
 
     [SerializeField]
     private GameObject GameOverObjectScreenthing;
@@ -73,6 +75,9 @@ public class EndOfTimesScript : MonoBehaviour
 
     private void Update()
     {
+        if (StartZoomTimer.IsRunning)
+            SinkTrees();
+
         if (!ZoomTimer.IsRunning)
             return;
         EndCamera.transform.LookAt(FollowTarget);
@@ -103,5 +108,20 @@ public class EndOfTimesScript : MonoBehaviour
             return;
 
         StartZoomTimer.StartTimer(5);
+        foreach (GameObject tree in TREES)
+        {
+            for (int i = 0; i < tree.transform.childCount; i++)
+            {
+                tree.transform.GetChild(i).GetComponent<MeshCollider>().enabled = false;
+            }
+        }
+    }
+
+    private void SinkTrees()
+    {
+        foreach (GameObject tree in TREES)
+        {
+            tree.transform.Translate(Vector3.down * 15 * Time.deltaTime);
+        }
     }
 }
