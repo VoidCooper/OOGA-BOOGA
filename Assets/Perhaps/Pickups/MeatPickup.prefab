@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d7a67ecb6a11e499709c941e11c6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StarveHealAmount: 3
+  ValueAmount: 4
   pickupType: 0
 --- !u!1 &3103385430281395369
 GameObject:

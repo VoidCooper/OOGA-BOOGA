@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999946, b: 0.99999946, a: 1}
+  m_IndirectSpecularColor: {r: 0.49853575, g: 0.78344834, b: 0.82188976, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1556,6 +1556,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3385294054161404204, guid: bc437794dd4e49149b3cd80fd9278a4d, type: 3}
+      propertyPath: MaxHunger
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385294054161404204, guid: bc437794dd4e49149b3cd80fd9278a4d, type: 3}
+      propertyPath: StarveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385294054161404204, guid: bc437794dd4e49149b3cd80fd9278a4d, type: 3}
+      propertyPath: DamageWithHungerSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6993822634976892665, guid: bc437794dd4e49149b3cd80fd9278a4d, type: 3}
       propertyPath: m_Name
       value: PlayerPrefab
@@ -3248,6 +3260,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 6629185609560106916, guid: cc71e4ace863154419b0abdb4fd38298, type: 3}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 5327991679279905886, guid: 0e290c3b231dc0846b55684a7722aa65, type: 3}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.data[6]
+      value: 
+      objectReference: {fileID: 6629185609560106916, guid: cc71e4ace863154419b0abdb4fd38298, type: 3}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.data[7]
+      value: 
+      objectReference: {fileID: 6407917217009420583, guid: 184dac57a727dff4aabcbc4a7f2abb44, type: 3}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.data[8]
+      value: 
+      objectReference: {fileID: 5327991679279905886, guid: 0e290c3b231dc0846b55684a7722aa65, type: 3}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.data[9]
+      value: 
+      objectReference: {fileID: 8325669043934708983, guid: dd2a2a9b9c17d5444b1ccd6b1edcaa31, type: 3}
+    - target: {fileID: 9021650734581988597, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
+      propertyPath: PrefabsToSpawn.Array.data[10]
+      value: 
+      objectReference: {fileID: 8325669043934708983, guid: dd2a2a9b9c17d5444b1ccd6b1edcaa31, type: 3}
     - target: {fileID: 9021650734581988598, guid: f505b0e6caf4611448712149ecadcb32, type: 3}
       propertyPath: m_Name
       value: Spawner
@@ -4788,9 +4832,10 @@ MonoBehaviour:
   EndModel: {fileID: 1206396920}
   Doomsday: {fileID: 936814778}
   Endings:
+  - ufo
   - greenball
-  - pyramid
   - bigfoot
+  - pyramid
   GameOverObjectScreenthing: {fileID: 1138921005}
 --- !u!4 &1727589986 stripped
 Transform:
