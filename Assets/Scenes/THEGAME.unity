@@ -4832,9 +4832,10 @@ MonoBehaviour:
   EndModel: {fileID: 1206396920}
   Doomsday: {fileID: 936814778}
   Endings:
+  - ufo
   - greenball
-  - pyramid
   - bigfoot
+  - pyramid
   GameOverObjectScreenthing: {fileID: 1138921005}
 --- !u!4 &1727589986 stripped
 Transform:
