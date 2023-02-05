@@ -69,6 +69,8 @@ public class PlayerFPSMovement : MonoBehaviour
     public void Disable()
     {
         _disabled = true;
+        transform.position = transform.position;
+        Destroy(rb);
     }
 
     private void CheckIsPlayerGrounded()

@@ -34,6 +34,7 @@ public class EndOfTimesScript : MonoBehaviour
         m_playerHealth.IsDying += playerHealth_IsDying;
     }
 
+
     private void OnDestroy()
     {
         StartZoomTimer.OnTimerCompleted -= StartZoomTimer_OnTimerCompleted;
@@ -53,10 +54,10 @@ public class EndOfTimesScript : MonoBehaviour
         if (isDead)
             return;
 
-        int i = Random.Range(0, Endings.Length - 1);
+        int i = Random.Range(0, Endings.Length);
         Doomsday.GetComponent<Animator>().SetBool(Endings[i], true);
         ZoomTimer.StartTimer(10);
-        DisableTimer.StartTimer(3.5f);
+        DisableTimer.StartTimer(4.8f);
         EndCamera.gameObject.SetActive(true);
         EndCamera.transform.position = Camera.main.transform.position;
         Camera.main.gameObject.SetActive(false);
