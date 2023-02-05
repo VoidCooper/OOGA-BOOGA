@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private static GameManager m_instance;
     private float _gameSpeed;
     private float _unpausedSpeed;
-    private float _gameLength = 5;
+    private float _gameLength = 300;
     private ScaledOneshotTimer _gameTimer;
 
     public float gameLength { get { return _gameLength; } }
