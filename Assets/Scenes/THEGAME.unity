@@ -1565,6 +1565,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3385294054161404204, guid: bc437794dd4e49149b3cd80fd9278a4d, type: 3}
+      propertyPath: HealWithHungerSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385294054161404204, guid: bc437794dd4e49149b3cd80fd9278a4d, type: 3}
       propertyPath: DamageWithHungerSpeed
       value: 3
       objectReference: {fileID: 0}
