@@ -31,6 +31,8 @@ public class PlayerFPSMovement : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
+    private bool _disabled = false;
+
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -44,6 +46,9 @@ public class PlayerFPSMovement : MonoBehaviour
 
     void Update()
     {
+        if (_disabled)
+            return;
+
         CheckIsPlayerGrounded();
 
         HandleMovementInput();
@@ -55,7 +60,15 @@ public class PlayerFPSMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (_disabled)
+            return;
+
         HandleMovement();
+    }
+
+    public void Disable()
+    {
+        _disabled = true;
     }
 
     private void CheckIsPlayerGrounded()
